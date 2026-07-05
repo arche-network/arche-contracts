@@ -1,0 +1,24 @@
+# Foundry
+cache/
+out/
+broadcast/
+lib/
+
+# Environment
+.env
+.env.local
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# npm (in case)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Deployment artifacts (local)
+deployments/local/
