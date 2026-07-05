@@ -46,8 +46,8 @@ contract ArcheE2ETest is Test {
         vm.stopPrank();
 
         // Fund test accounts
-        vm.deal(alice, 1000 ether);
-        vm.deal(bob, 100 ether);
+        vm.deal(alice, 100_000 ether);
+        vm.deal(bob, 100_000 ether);
     }
 
     // === AgentRegistry tests ===
