@@ -69,8 +69,8 @@ Get testnet ETH from a faucet:
 ### Install dependencies
 
 ```bash
-forge install OpenZeppelin/openzeppelin-contracts --no-commit
-forge install foundry-rs/forge-std --no-commit
+forge install OpenZeppelin/openzeppelin-contracts
+forge install foundry-rs/forge-std
 ```
 
 ### Build
@@ -87,12 +87,13 @@ forge test -vv
 
 Expected output:
 ```
-Running 10 tests for test/ArcheE2E.t.sol:ArcheE2ETest
+Running 11 tests for test/ArcheE2E.t.sol:ArcheE2ETest
 [PASS] testRegisterAgent() (gas: XXX)
 [PASS] testE2E_PaymentWithTaxNoReferrer() (gas: XXX)
 [PASS] testE2E_PaymentWithReferrers() (gas: XXX)
+[PASS] testFuzz_TaxAlwaysBalanced(uint256) (runs: 256)
 ...
-Test result: ok. 10 passed; 0 failed
+Test result: ok. 11 passed; 0 failed
 ```
 
 ### Test coverage
@@ -104,6 +105,21 @@ forge coverage
 ---
 
 ## Deployment
+
+### 🟢 Live Deployments
+
+**Ethereum Sepolia** (testnet, deployed 2026-07-05):
+
+| Contract | Address |
+|----------|---------|
+| ArcheTreasury | [`0x43eD1577E2866f16314115C5813d11De86c316C4`](https://sepolia.etherscan.io/address/0x43eD1577E2866f16314115C5813d11De86c316C4) |
+| AgentRegistry | [`0x04cfa2D9A5aff4D9d23a9576C943548709Ed31BF`](https://sepolia.etherscan.io/address/0x04cfa2D9A5aff4D9d23a9576C943548709Ed31BF) |
+| AgentTax | [`0xaC8028A66CcC5E6e254782921CB55B72eFC160F5`](https://sepolia.etherscan.io/address/0xaC8028A66CcC5E6e254782921CB55B72eFC160F5) |
+| ServicePayment | [`0x43cA25eb1d150674d1CA1ebEF3851D9D138E1bF0`](https://sepolia.etherscan.io/address/0x43cA25eb1d150674d1CA1ebEF3851D9D138E1bF0) |
+| RevenueShare | [`0xA7b19E9719DfAba338eFc1d1E9525538629D6998`](https://sepolia.etherscan.io/address/0xA7b19E9719DfAba338eFc1d1E9525538629D6998) |
+
+All cross-contract wiring verified on-chain. `$ARCHE` native-gas deployment on Arche Testnet coming next.
+
 
 ### Sepolia (dry run, first target)
 
