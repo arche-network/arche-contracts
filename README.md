@@ -112,15 +112,25 @@ forge coverage
 
 | Property | Value |
 |----------|-------|
+| Block explorer | https://archescan.com |
+| RPC | https://rpc.archescan.com |
 | Chain ID | `98684` |
 | Framework | Arbitrum Stack (Orbit) |
 | Settlement layer | Ethereum Sepolia |
 | Data availability | AnyTrust DA |
-| Native gas token | **$ARCHE** (`0x163214372c17F28264265FDE1da5CeC711C110F3`) |
-| RPC | `https://rpc-arche-testnet-i98p3c6fc7.t.conduit.xyz` |
+| Native gas token | **$ARCHE** (`0x163214372c17F28264265FDE1da5CeC711C110F3` on Sepolia) |
 
-Every transaction on Arche Testnet — agent registration, service payment, tax, referral splits — is paid in native **$ARCHE** gas.
+**Core contracts on Arche Testnet:**
 
+| Contract | Address |
+|----------|---------|
+| ArcheTreasury | `0x43eD1577E2866f16314115C5813d11De86c316C4` |
+| AgentRegistry | `0x04cfa2D9A5aff4D9d23a9576C943548709Ed31BF` |
+| AgentTax | `0xaC8028A66CcC5E6e254782921CB55B72eFC160F5` |
+| ServicePayment | `0x43cA25eb1d150674d1CA1ebEF3851D9D138E1bF0` |
+| RevenueShare | `0xA7b19E9719DfAba338eFc1d1E9525538629D6998` |
+
+End-to-end verified on-chain: agent registration, service payment, 2.5% tax (50% burned / 50% to treasury), 3-tier referral split (10/6/4%), and reputation update — all paid in native **$ARCHE** gas.
 
 **Ethereum Sepolia** (testnet, deployed 2026-07-05):
 
@@ -132,7 +142,7 @@ Every transaction on Arche Testnet — agent registration, service payment, tax,
 | ServicePayment | [`0x43cA25eb1d150674d1CA1ebEF3851D9D138E1bF0`](https://sepolia.etherscan.io/address/0x43cA25eb1d150674d1CA1ebEF3851D9D138E1bF0) |
 | RevenueShare | [`0xA7b19E9719DfAba338eFc1d1E9525538629D6998`](https://sepolia.etherscan.io/address/0xA7b19E9719DfAba338eFc1d1E9525538629D6998) |
 
-All cross-contract wiring verified on-chain. `$ARCHE` native-gas deployment on Arche Testnet coming next.
+All cross-contract wiring verified on-chain. This was the initial verification deployment; the `$ARCHE` native-gas deployment is now live on Arche Testnet (see above).
 
 
 ### Sepolia (dry run, first target)
