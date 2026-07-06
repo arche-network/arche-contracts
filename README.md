@@ -108,6 +108,20 @@ forge coverage
 
 ### 🟢 Live Deployments
 
+**Arche Testnet** — our own Arbitrum Orbit L2 where **$ARCHE is the native gas token**:
+
+| Property | Value |
+|----------|-------|
+| Chain ID | `98684` |
+| Framework | Arbitrum Stack (Orbit) |
+| Settlement layer | Ethereum Sepolia |
+| Data availability | AnyTrust DA |
+| Native gas token | **$ARCHE** (`0x163214372c17F28264265FDE1da5CeC711C110F3`) |
+| RPC | `https://rpc-arche-testnet-i98p3c6fc7.t.conduit.xyz` |
+
+Every transaction on Arche Testnet — agent registration, service payment, tax, referral splits — is paid in native **$ARCHE** gas.
+
+
 **Ethereum Sepolia** (testnet, deployed 2026-07-05):
 
 | Contract | Address |
